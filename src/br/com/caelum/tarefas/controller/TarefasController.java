@@ -66,12 +66,15 @@ public class TarefasController {
 		return "redirect:listaTarefas";
 	}
 
-	@ResponseBody
 	@RequestMapping("finalizaTarefa")
-	public void finaliza(Long id) throws InterruptedException {
+	public String finaliza(Long id, Model model) throws InterruptedException {
 		JdbcTarefaDao dao = new JdbcTarefaDao();
 		dao.finaliza(id);
 
+		model.addAttribute("tarefa", dao.buscaPorId(id));
+
 		Thread.sleep(5000);
+
+		return "tarefa/finalizada";
 	}
 }

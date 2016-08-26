@@ -12,14 +12,14 @@
     <body>
         <script>
             function finalizaAgora(id) {
-            	$.post("finalizaTarefa", {'id' : id}, function() {
-            		$("#tarefa_" + id).html("Finalizado");
+            	$.post("finalizaTarefa", {'id' : id}, function(resposta) {
+            		$("#tarefa_" + id).html(resposta);
             	})
             }
 
             function removeAgora(id) {
             	$.post("removeTarefa", {'id' : id}, function() {
-            		$("#tarefa_" + id).closest("tr").remove();
+            		$("#tarefa_" + id).remove();
             	})
             }
         </script>
@@ -37,11 +37,11 @@
             </tr>
 
             <c:forEach var="tarefa" items="${tarefas}">
-                <tr>
+                <tr id="tarefa_${tarefa.id}">
                     <td>${tarefa.id}</td>
                     <td>${tarefa.descricao}</td>
                     <c:if test="${tarefa.finalizado eq false}">
-                        <td id="tarefa_${tarefa.id}">
+                        <td>
                             <a href="#" onclick="finalizaAgora(${tarefa.id})">Finalizar agora!</a>
                         </td>
                     </c:if>
