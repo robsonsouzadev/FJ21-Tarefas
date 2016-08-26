@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Página inicial</title>
+        <link href="resources/css/tarefas.css" rel="stylesheet">
     </head>
     <body>
         <h2>Página inicial da lista de tarefas</h2>

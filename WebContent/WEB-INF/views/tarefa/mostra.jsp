@@ -7,6 +7,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Alterar tarefa - ${tarefa.id}</title>
+        <link href="resources/css/tarefas.css" rel="stylesheet">
         <link href="<c:url value='/resources/css/jquery.css' />" rel="stylesheet">
         <script src="<c:url value='/resources/js/jquery.js' />"></script>
         <script src="<c:url value='/resources/js/jquery-ui.js' />"></script>

@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Login</title>
+        <link href="resources/css/tarefas.css" rel="stylesheet">
     </head>
     <body>
         <h2>Página de login das tarefas</h2>

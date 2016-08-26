@@ -7,6 +7,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Lista de tarefas</title>
+        <link href="resources/css/tarefas.css" rel="stylesheet">
         <script src="<c:url value='/resources/js/jquery.js' />"></script>
     </head>
     <body>
