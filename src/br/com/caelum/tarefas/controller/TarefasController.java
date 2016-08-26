@@ -41,9 +41,11 @@ public class TarefasController {
 
 	@ResponseBody
 	@RequestMapping("removeTarefa")
-	public void remove(Tarefa tarefa) {
+	public void remove(Tarefa tarefa) throws InterruptedException {
 		JdbcTarefaDao dao = new JdbcTarefaDao();
 		dao.remove(tarefa);
+
+		Thread.sleep(5000);
 	}
 
 	@RequestMapping("mostraTarefa")
@@ -66,8 +68,10 @@ public class TarefasController {
 
 	@ResponseBody
 	@RequestMapping("finalizaTarefa")
-	public void finaliza(Long id) {
+	public void finaliza(Long id) throws InterruptedException {
 		JdbcTarefaDao dao = new JdbcTarefaDao();
 		dao.finaliza(id);
+
+		Thread.sleep(5000);
 	}
 }
